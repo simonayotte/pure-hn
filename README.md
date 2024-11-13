@@ -1,8 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pure HN - A Minimal Hacker News Client
+
+A clean and minimal web client for browsing Hacker News top stories and comments.
+
+Built with Next.js 14, React, and TailwindCSS.
+
+## Features
+
+- 🚀 Browse top stories from Hacker News
+- 💬 Read comments in a threaded view
+- 🌓 Dark/Light mode support
+- 🖼️ Story preview images (when available)
+- ⚡ Fast and responsive UI
+- 🔄 Real-time updates with React Query
+- 🎯 Edge runtime for optimal performance
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework
+- [React Query](https://tanstack.com/query) - Data fetching and caching
+- [TailwindCSS](https://tailwindcss.com/) - Styling
+- [Hono](https://hono.dev/) - Edge API routes
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/pure-hn.git
+cd pure-hn
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +55,31 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/               # Next.js app router
+│   ├── api/           # API routes using Hono
+│   └── page.tsx       # Main page component
+├── components/        # React components
+│   ├── comment/       # Comment-related components
+│   ├── story/         # Story-related components
+│   └── ui/            # Shared UI components
+├── lib/               # Utility functions and types
+│   └── api/           # API client and types
+```
 
-## Learn More
+## API Routes
 
-To learn more about Next.js, take a look at the following resources:
+The project uses the official Hacker News API through edge functions:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/api/topstories` - Get IDs of top stories
+- `/api/item/[id]` - Get item details (story/comment)
+- `/api/og` - Get Open Graph metadata for story URLs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## References
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. [Hacker News API](https://github.com/HackerNews/API)
