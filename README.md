@@ -1,8 +1,11 @@
-# Pure HN - A Minimal Hacker News Client
+# 🗞️ Pure HN - A Minimal Hacker News Web Client
 
-A clean and minimal web client for browsing Hacker News top stories and comments.
+#### A clean and minimal web client for browsing Hacker News top stories and comments.
 
-Built with Next.js 14, React, and TailwindCSS.
+#### Built with Next.js 14, React, and TailwindCSS.
+
+![CleanShot 2024-11-13 at 11 44 48@2x](https://github.com/user-attachments/assets/f3664ab7-9b2c-4a1e-ab08-a918bd7015ee)
+
 
 ## Features
 
